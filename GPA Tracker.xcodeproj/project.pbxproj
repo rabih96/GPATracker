@@ -7,14 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6E853DA5F599E2EB7B375E /* Pods_GPA_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC0A1413556DA2140E1018A /* Pods_GPA_Tracker.framework */; };
+		B21624171F09621C002E2CA5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21624161F09621C002E2CA5 /* SettingsController.swift */; };
+		B21C34B61F37362500C9AE31 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21C34B51F37362500C9AE31 /* ChartViewController.swift */; };
+		B21C34B81F3888F400C9AE31 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21C34B71F3888F400C9AE31 /* LargeValueFormatter.swift */; };
+		B21C34BA1F39270900C9AE31 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21C34B91F39270900C9AE31 /* ResultTableViewController.swift */; };
+		B21DBCE21F0842060052C269 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21DBCE11F0842060052C269 /* SettingsTableViewController.swift */; };
+		B21FC2541F4DD01C0052E3F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21FC2531F4DD01C0052E3F3 /* GoogleService-Info.plist */; };
 		B28655BE1F06FD66005C9162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655BD1F06FD66005C9162 /* AppDelegate.swift */; };
 		B28655C01F06FD66005C9162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655BF1F06FD66005C9162 /* ViewController.swift */; };
 		B28655C31F06FD66005C9162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28655C11F06FD66005C9162 /* Main.storyboard */; };
 		B28655C51F06FD66005C9162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28655C41F06FD66005C9162 /* Assets.xcassets */; };
 		B28655C81F06FD66005C9162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28655C61F06FD66005C9162 /* LaunchScreen.storyboard */; };
+		B28655E21F06FD96005C9162 /* AlamofireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655D01F06FD96005C9162 /* AlamofireCell.swift */; };
+		B28655E31F06FD96005C9162 /* AlamofireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655D11F06FD96005C9162 /* AlamofireCell.xib */; };
+		B28655E41F06FD96005C9162 /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655D21F06FD96005C9162 /* ColorPickerCell.swift */; };
+		B28655E51F06FD96005C9162 /* ColorPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655D31F06FD96005C9162 /* ColorPickerCell.xib */; };
+		B28655E61F06FD96005C9162 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655D41F06FD96005C9162 /* CourseTableViewCell.swift */; };
+		B28655E71F06FD96005C9162 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655D51F06FD96005C9162 /* CourseTableViewCell.xib */; };
+		B28655E81F06FD96005C9162 /* DropboxUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655D61F06FD96005C9162 /* DropboxUserCell.swift */; };
+		B28655E91F06FD96005C9162 /* DropboxUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655D71F06FD96005C9162 /* DropboxUserCell.xib */; };
+		B28655EA1F06FD96005C9162 /* RPCircularProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655D81F06FD96005C9162 /* RPCircularProgressCell.swift */; };
+		B28655EB1F06FD96005C9162 /* RPCircularProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655D91F06FD96005C9162 /* RPCircularProgressCell.xib */; };
+		B28655EC1F06FD96005C9162 /* SwiftRaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655DA1F06FD96005C9162 /* SwiftRaterCell.swift */; };
+		B28655ED1F06FD96005C9162 /* SwiftRaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655DB1F06FD96005C9162 /* SwiftRaterCell.xib */; };
+		B28655EE1F06FD96005C9162 /* SwiftyDropboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655DC1F06FD96005C9162 /* SwiftyDropboxCell.swift */; };
+		B28655EF1F06FD96005C9162 /* SwiftyDropboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655DD1F06FD96005C9162 /* SwiftyDropboxCell.xib */; };
+		B28655F01F06FD96005C9162 /* SwiftyFORMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655DE1F06FD96005C9162 /* SwiftyFORMCell.swift */; };
+		B28655F11F06FD96005C9162 /* SwiftyFORMCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655DF1F06FD96005C9162 /* SwiftyFORMCell.xib */; };
+		B28655F21F06FD96005C9162 /* SwiftyJSONCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655E01F06FD96005C9162 /* SwiftyJSONCell.swift */; };
+		B28655F31F06FD96005C9162 /* SwiftyJSONCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28655E11F06FD96005C9162 /* SwiftyJSONCell.xib */; };
+		B28655FB1F06FDB7005C9162 /* CourseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655F51F06FDB7005C9162 /* CourseDetailsController.swift */; };
+		B28655FC1F06FDB7005C9162 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655F61F06FDB7005C9162 /* CoursesTableViewController.swift */; };
+		B28655FD1F06FDB7005C9162 /* GradeScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655F71F06FDB7005C9162 /* GradeScaleViewController.swift */; };
+		B28655FE1F06FDB7005C9162 /* OSLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655F81F06FDB7005C9162 /* OSLViewController.swift */; };
+		B28655FF1F06FDB7005C9162 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655F91F06FDB7005C9162 /* ReportViewController.swift */; };
+		B28656001F06FDB7005C9162 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28655FA1F06FDB7005C9162 /* SettingsViewController.swift */; };
+		B286560A1F06FDE4005C9162 /* CoursesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656011F06FDE4005C9162 /* CoursesManager.swift */; };
+		B286560B1F06FDE4005C9162 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656021F06FDE4005C9162 /* DropboxViewController.swift */; };
+		B286560C1F06FDE4005C9162 /* DropboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28656031F06FDE4005C9162 /* DropboxViewController.xib */; };
+		B286560D1F06FDE4005C9162 /* RPCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656041F06FDE4005C9162 /* RPCircularProgress.swift */; };
+		B286560E1F06FDE4005C9162 /* ProgressAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656051F06FDE4005C9162 /* ProgressAlertView.swift */; };
+		B286560F1F06FDE4005C9162 /* MInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656061F06FDE4005C9162 /* MInfoViewController.swift */; };
+		B28656101F06FDE4005C9162 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656071F06FDE4005C9162 /* LoadingIndicatorView.swift */; };
+		B28656111F06FDE4005C9162 /* UndoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656081F06FDE4005C9162 /* UndoView.swift */; };
+		B28656121F06FDE4005C9162 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28656091F06FDE4005C9162 /* Theme.swift */; };
+		B29407D71F0700FA00EF742E /* EJVColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29407D61F0700FA00EF742E /* EJVColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BCEFA10A8CAF681086BE96E /* Pods-GPA Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		4661891C3EDF0FED4B990437 /* Pods-GPA Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		B21624161F09621C002E2CA5 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		B21C34B51F37362500C9AE31 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		B21C34B71F3888F400C9AE31 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		B21C34B91F39270900C9AE31 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		B21DBCE11F0842060052C269 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		B21FC2531F4DD01C0052E3F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B28655BA1F06FD66005C9162 /* GPA Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28655BD1F06FD66005C9162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28655BF1F06FD66005C9162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +71,41 @@
 		B28655C41F06FD66005C9162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28655C71F06FD66005C9162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28655C91F06FD66005C9162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B28655D01F06FD96005C9162 /* AlamofireCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCell.swift; sourceTree = "<group>"; };
+		B28655D11F06FD96005C9162 /* AlamofireCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlamofireCell.xib; sourceTree = "<group>"; };
+		B28655D21F06FD96005C9162 /* ColorPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerCell.swift; sourceTree = "<group>"; };
+		B28655D31F06FD96005C9162 /* ColorPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerCell.xib; sourceTree = "<group>"; };
+		B28655D41F06FD96005C9162 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		B28655D51F06FD96005C9162 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
+		B28655D61F06FD96005C9162 /* DropboxUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxUserCell.swift; sourceTree = "<group>"; };
+		B28655D71F06FD96005C9162 /* DropboxUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropboxUserCell.xib; sourceTree = "<group>"; };
+		B28655D81F06FD96005C9162 /* RPCircularProgressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCircularProgressCell.swift; sourceTree = "<group>"; };
+		B28655D91F06FD96005C9162 /* RPCircularProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPCircularProgressCell.xib; sourceTree = "<group>"; };
+		B28655DA1F06FD96005C9162 /* SwiftRaterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRaterCell.swift; sourceTree = "<group>"; };
+		B28655DB1F06FD96005C9162 /* SwiftRaterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftRaterCell.xib; sourceTree = "<group>"; };
+		B28655DC1F06FD96005C9162 /* SwiftyDropboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDropboxCell.swift; sourceTree = "<group>"; };
+		B28655DD1F06FD96005C9162 /* SwiftyDropboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftyDropboxCell.xib; sourceTree = "<group>"; };
+		B28655DE1F06FD96005C9162 /* SwiftyFORMCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyFORMCell.swift; sourceTree = "<group>"; };
+		B28655DF1F06FD96005C9162 /* SwiftyFORMCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftyFORMCell.xib; sourceTree = "<group>"; };
+		B28655E01F06FD96005C9162 /* SwiftyJSONCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSONCell.swift; sourceTree = "<group>"; };
+		B28655E11F06FD96005C9162 /* SwiftyJSONCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftyJSONCell.xib; sourceTree = "<group>"; };
+		B28655F51F06FDB7005C9162 /* CourseDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsController.swift; sourceTree = "<group>"; };
+		B28655F61F06FDB7005C9162 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		B28655F71F06FDB7005C9162 /* GradeScaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeScaleViewController.swift; sourceTree = "<group>"; };
+		B28655F81F06FDB7005C9162 /* OSLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLViewController.swift; sourceTree = "<group>"; };
+		B28655F91F06FDB7005C9162 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		B28655FA1F06FDB7005C9162 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B28656011F06FDE4005C9162 /* CoursesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesManager.swift; sourceTree = "<group>"; };
+		B28656021F06FDE4005C9162 /* DropboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxViewController.swift; sourceTree = "<group>"; };
+		B28656031F06FDE4005C9162 /* DropboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropboxViewController.xib; sourceTree = "<group>"; };
+		B28656041F06FDE4005C9162 /* RPCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCircularProgress.swift; sourceTree = "<group>"; };
+		B28656051F06FDE4005C9162 /* ProgressAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressAlertView.swift; sourceTree = "<group>"; };
+		B28656061F06FDE4005C9162 /* MInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MInfoViewController.swift; sourceTree = "<group>"; };
+		B28656071F06FDE4005C9162 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		B28656081F06FDE4005C9162 /* UndoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndoView.swift; sourceTree = "<group>"; };
+		B28656091F06FDE4005C9162 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B29407D61F0700FA00EF742E /* EJVColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EJVColorPicker.swift; sourceTree = "<group>"; };
+		CAC0A1413556DA2140E1018A /* Pods_GPA_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPA_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +113,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6E853DA5F599E2EB7B375E /* Pods_GPA_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800554367B287FABD824435D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC0A1413556DA2140E1018A /* Pods_GPA_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B23A16221F48D4E100350248 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				B28656011F06FDE4005C9162 /* CoursesManager.swift */,
+				B21C34B71F3888F400C9AE31 /* LargeValueFormatter.swift */,
+				B28656041F06FDE4005C9162 /* RPCircularProgress.swift */,
+				B28656051F06FDE4005C9162 /* ProgressAlertView.swift */,
+				B28656071F06FDE4005C9162 /* LoadingIndicatorView.swift */,
+				B28656081F06FDE4005C9162 /* UndoView.swift */,
+				B28656091F06FDE4005C9162 /* Theme.swift */,
+				B29407D61F0700FA00EF742E /* EJVColorPicker.swift */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
 		B28655B11F06FD66005C9162 = {
 			isa = PBXGroup;
 			children = (
 				B28655BC1F06FD66005C9162 /* GPA Tracker */,
 				B28655BB1F06FD66005C9162 /* Products */,
+				F381EAF76C74301B61B63CA3 /* Pods */,
+				800554367B287FABD824435D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +164,72 @@
 		B28655BC1F06FD66005C9162 /* GPA Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				B23A16221F48D4E100350248 /* Extras */,
+				B28655CF1F06FD84005C9162 /* Custom Cells */,
+				B28655F41F06FD9C005C9162 /* View Controllers */,
 				B28655BD1F06FD66005C9162 /* AppDelegate.swift */,
 				B28655BF1F06FD66005C9162 /* ViewController.swift */,
 				B28655C11F06FD66005C9162 /* Main.storyboard */,
 				B28655C41F06FD66005C9162 /* Assets.xcassets */,
 				B28655C61F06FD66005C9162 /* LaunchScreen.storyboard */,
 				B28655C91F06FD66005C9162 /* Info.plist */,
+				B21FC2531F4DD01C0052E3F3 /* GoogleService-Info.plist */,
 			);
 			path = "GPA Tracker";
+			sourceTree = "<group>";
+		};
+		B28655CF1F06FD84005C9162 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B28655D01F06FD96005C9162 /* AlamofireCell.swift */,
+				B28655D11F06FD96005C9162 /* AlamofireCell.xib */,
+				B28655D21F06FD96005C9162 /* ColorPickerCell.swift */,
+				B28655D31F06FD96005C9162 /* ColorPickerCell.xib */,
+				B28655D41F06FD96005C9162 /* CourseTableViewCell.swift */,
+				B28655D51F06FD96005C9162 /* CourseTableViewCell.xib */,
+				B28655D61F06FD96005C9162 /* DropboxUserCell.swift */,
+				B28655D71F06FD96005C9162 /* DropboxUserCell.xib */,
+				B28655D81F06FD96005C9162 /* RPCircularProgressCell.swift */,
+				B28655D91F06FD96005C9162 /* RPCircularProgressCell.xib */,
+				B28655DA1F06FD96005C9162 /* SwiftRaterCell.swift */,
+				B28655DB1F06FD96005C9162 /* SwiftRaterCell.xib */,
+				B28655DC1F06FD96005C9162 /* SwiftyDropboxCell.swift */,
+				B28655DD1F06FD96005C9162 /* SwiftyDropboxCell.xib */,
+				B28655DE1F06FD96005C9162 /* SwiftyFORMCell.swift */,
+				B28655DF1F06FD96005C9162 /* SwiftyFORMCell.xib */,
+				B28655E01F06FD96005C9162 /* SwiftyJSONCell.swift */,
+				B28655E11F06FD96005C9162 /* SwiftyJSONCell.xib */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		B28655F41F06FD9C005C9162 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B28656021F06FDE4005C9162 /* DropboxViewController.swift */,
+				B28656031F06FDE4005C9162 /* DropboxViewController.xib */,
+				B28655F51F06FDB7005C9162 /* CourseDetailsController.swift */,
+				B28655F61F06FDB7005C9162 /* CoursesTableViewController.swift */,
+				B28655F71F06FDB7005C9162 /* GradeScaleViewController.swift */,
+				B28655F81F06FDB7005C9162 /* OSLViewController.swift */,
+				B28655F91F06FDB7005C9162 /* ReportViewController.swift */,
+				B28655FA1F06FDB7005C9162 /* SettingsViewController.swift */,
+				B28656061F06FDE4005C9162 /* MInfoViewController.swift */,
+				B21DBCE11F0842060052C269 /* SettingsTableViewController.swift */,
+				B21624161F09621C002E2CA5 /* SettingsController.swift */,
+				B21C34B51F37362500C9AE31 /* ChartViewController.swift */,
+				B21C34B91F39270900C9AE31 /* ResultTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F381EAF76C74301B61B63CA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4661891C3EDF0FED4B990437 /* Pods-GPA Tracker.debug.xcconfig */,
+				2BCEFA10A8CAF681086BE96E /* Pods-GPA Tracker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B28655CC1F06FD66005C9162 /* Build configuration list for PBXNativeTarget "GPA Tracker" */;
 			buildPhases = (
+				C02DECC69CB9CC7D0CA0B0AA /* [CP] Check Pods Manifest.lock */,
 				B28655B61F06FD66005C9162 /* Sources */,
 				B28655B71F06FD66005C9162 /* Frameworks */,
 				B28655B81F06FD66005C9162 /* Resources */,
+				9DC0372648DFD1D08A1ABDC1 /* [CP] Embed Pods Frameworks */,
+				5B4AE4E4189B19A0814BFA17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,21 +295,125 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28655F11F06FD96005C9162 /* SwiftyFORMCell.xib in Resources */,
+				B28655EF1F06FD96005C9162 /* SwiftyDropboxCell.xib in Resources */,
+				B28655E91F06FD96005C9162 /* DropboxUserCell.xib in Resources */,
+				B28655E71F06FD96005C9162 /* CourseTableViewCell.xib in Resources */,
 				B28655C81F06FD66005C9162 /* LaunchScreen.storyboard in Resources */,
 				B28655C51F06FD66005C9162 /* Assets.xcassets in Resources */,
+				B28655ED1F06FD96005C9162 /* SwiftRaterCell.xib in Resources */,
+				B28655F31F06FD96005C9162 /* SwiftyJSONCell.xib in Resources */,
+				B28655E31F06FD96005C9162 /* AlamofireCell.xib in Resources */,
+				B28655E51F06FD96005C9162 /* ColorPickerCell.xib in Resources */,
 				B28655C31F06FD66005C9162 /* Main.storyboard in Resources */,
+				B286560C1F06FDE4005C9162 /* DropboxViewController.xib in Resources */,
+				B28655EB1F06FD96005C9162 /* RPCircularProgressCell.xib in Resources */,
+				B21FC2541F4DD01C0052E3F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B4AE4E4189B19A0814BFA17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC0372648DFD1D08A1ABDC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRater/SwiftRater.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyFORM/SwiftyFORM.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRater.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyFORM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C02DECC69CB9CC7D0CA0B0AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPA Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B28655B61F06FD66005C9162 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28655FF1F06FDB7005C9162 /* ReportViewController.swift in Sources */,
+				B29407D71F0700FA00EF742E /* EJVColorPicker.swift in Sources */,
+				B21C34B61F37362500C9AE31 /* ChartViewController.swift in Sources */,
+				B28655EA1F06FD96005C9162 /* RPCircularProgressCell.swift in Sources */,
+				B28656111F06FDE4005C9162 /* UndoView.swift in Sources */,
+				B286560B1F06FDE4005C9162 /* DropboxViewController.swift in Sources */,
+				B286560D1F06FDE4005C9162 /* RPCircularProgress.swift in Sources */,
+				B21C34BA1F39270900C9AE31 /* ResultTableViewController.swift in Sources */,
+				B28655FD1F06FDB7005C9162 /* GradeScaleViewController.swift in Sources */,
+				B286560E1F06FDE4005C9162 /* ProgressAlertView.swift in Sources */,
+				B286560F1F06FDE4005C9162 /* MInfoViewController.swift in Sources */,
 				B28655C01F06FD66005C9162 /* ViewController.swift in Sources */,
+				B28655EC1F06FD96005C9162 /* SwiftRaterCell.swift in Sources */,
+				B28655EE1F06FD96005C9162 /* SwiftyDropboxCell.swift in Sources */,
+				B28655FE1F06FDB7005C9162 /* OSLViewController.swift in Sources */,
+				B28656121F06FDE4005C9162 /* Theme.swift in Sources */,
+				B28655E41F06FD96005C9162 /* ColorPickerCell.swift in Sources */,
+				B21C34B81F3888F400C9AE31 /* LargeValueFormatter.swift in Sources */,
 				B28655BE1F06FD66005C9162 /* AppDelegate.swift in Sources */,
+				B28655E81F06FD96005C9162 /* DropboxUserCell.swift in Sources */,
+				B21DBCE21F0842060052C269 /* SettingsTableViewController.swift in Sources */,
+				B286560A1F06FDE4005C9162 /* CoursesManager.swift in Sources */,
+				B28655F01F06FD96005C9162 /* SwiftyFORMCell.swift in Sources */,
+				B28655E21F06FD96005C9162 /* AlamofireCell.swift in Sources */,
+				B28656101F06FDE4005C9162 /* LoadingIndicatorView.swift in Sources */,
+				B28656001F06FDB7005C9162 /* SettingsViewController.swift in Sources */,
+				B28655F21F06FD96005C9162 /* SwiftyJSONCell.swift in Sources */,
+				B21624171F09621C002E2CA5 /* SettingsController.swift in Sources */,
+				B28655E61F06FD96005C9162 /* CourseTableViewCell.swift in Sources */,
+				B28655FC1F06FDB7005C9162 /* CoursesTableViewController.swift in Sources */,
+				B28655FB1F06FDB7005C9162 /* CourseDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,26 +536,34 @@
 		};
 		B28655CD1F06FD66005C9162 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4661891C3EDF0FED4B990437 /* Pods-GPA Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 89494LGMWD;
 				INFOPLIST_FILE = "GPA Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rabih96.GPA-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B28655CE1F06FD66005C9162 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BCEFA10A8CAF681086BE96E /* Pods-GPA Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 89494LGMWD;
 				INFOPLIST_FILE = "GPA Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rabih96.GPA-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +587,7 @@
 				B28655CE1F06FD66005C9162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

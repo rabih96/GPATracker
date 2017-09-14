@@ -137,7 +137,7 @@ open class RPCircularProgress: UIView {
         }
     }
 
-    open override class var layerClass : AnyClass {
+    open override class var layerClass: AnyClass {
         return ProgressLayer.self
     }
 
@@ -153,7 +153,7 @@ open class RPCircularProgress: UIView {
 
         setupDefaults()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -282,7 +282,7 @@ private extension RPCircularProgress {
         progressLayer.add(animation, forKey: AnimationKeys.progress)
     }
 
-    // MARK: - Indeterminate 
+    // MARK: - Indeterminate
 
     func addIndeterminateAnimation(_ completion: CompletionBlock?) {
         guard progressLayer.animation(forKey: AnimationKeys.indeterminate) == nil else { return }

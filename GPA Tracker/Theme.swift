@@ -10,13 +10,13 @@ import UIKit
 
 enum Theme: Int {
     case `default`, gray, blue, black, brown, orange, yellow, cyan, green, white
-    
+
     var color: UIColor {
         switch self {
         case .default:
-            return UIColor.init(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+            return UIColor.init(red: 170 / 255, green: 170 / 255, blue: 170 / 255, alpha: 1)
         case .gray:
-            return UIColor.init(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+            return UIColor.init(red: 170 / 255, green: 170 / 255, blue: 170 / 255, alpha: 1)
         case .blue:
             return .blue
         case .black:
@@ -32,7 +32,7 @@ enum Theme: Int {
         case .green:
             return .green
         case .white:
-            return UIColor.init(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+            return UIColor.init(red: 170 / 255, green: 170 / 255, blue: 170 / 255, alpha: 1)
         }
     }
 }
@@ -40,7 +40,7 @@ enum Theme: Int {
 let storedColor = "StoredColor"
 
 struct ThemeManager {
-    
+
     static func currentTheme() -> Theme {
         let storedTheme = UserDefaults.standard.integer(forKey: storedColor)
         if storedTheme != 0 {
@@ -49,7 +49,7 @@ struct ThemeManager {
             return .default
         }
     }
-    
+
     static func applyTheme(_ theme: Theme) {
         UserDefaults.standard.setValue(theme.rawValue, forKey: storedColor)
         UserDefaults.standard.synchronize()

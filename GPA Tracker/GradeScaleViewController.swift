@@ -12,18 +12,18 @@ import SwiftyFORM
 class GradeScaleViewController: FormViewController {
 
     var userDefaults = UserDefaults.standard
-    
+
     override func loadView() {
         super.loadView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(checkSaving(_:)))
     }
-    
+
     public func checkSaving(_ sender: AnyObject?) {
         formBuilder.validateAndUpdateUI()
         let result = formBuilder.validate()
         save(result)
     }
-    
+
     public func save(_ result: FormBuilder.FormValidateResult) {
         switch result {
         case .valid:
@@ -43,21 +43,21 @@ class GradeScaleViewController: FormViewController {
             userDefaults.setValue(Float(scaleDMinus.value), forKey: "D-")
             userDefaults.setValue(Float(scaleF.value), forKey: "F")
             userDefaults.synchronize()
-            
+
             _ = navigationController?.popViewController(animated: true)
-            
+
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-            
+
         case let .invalid(item, message):
             let title = item.elementIdentifier ?? "Error"
             form_simpleAlert(title, message)
         }
     }
-    
+
     override func populate(_ builder: FormBuilder) {
         builder.navigationTitle = "Grades Scale"
         builder.toolbarMode = .simple
-                
+
         builder += scaleAPlus
         builder += scaleA
         builder += scaleAMinus
@@ -65,19 +65,19 @@ class GradeScaleViewController: FormViewController {
         builder += scaleBPlus
         builder += scaleB
         builder += scaleBMinus
-        
+
         builder += scaleCPlus
         builder += scaleC
         builder += scaleCMinus
-        
+
         builder += scaleDPlus
         builder += scaleD
         builder += scaleDMinus
-        
+
         builder += scaleF
 
     }
-    
+
     lazy var scaleAPlus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("A+")
@@ -87,16 +87,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
-        if let valueOfKey = UserDefaults.standard.value(forKey: instance.title){
+
+        if let valueOfKey = UserDefaults.standard.value(forKey: instance.title) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleBPlus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("B+")
@@ -106,16 +106,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleCPlus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("C+")
@@ -125,16 +125,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleDPlus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("D+")
@@ -144,16 +144,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleA: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("A")
@@ -163,16 +163,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleB: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("B")
@@ -182,16 +182,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleC: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("C")
@@ -201,16 +201,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleD: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("D")
@@ -220,16 +220,16 @@ class GradeScaleViewController: FormViewController {
         instance.autocorrectionType = .no
         instance.submitValidate(CountSpecification.min(1), message: "Enter the scale value")
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
-        
+
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
-        
+
         return instance
     }()
-    
+
     lazy var scaleAMinus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("A-")
@@ -241,12 +241,12 @@ class GradeScaleViewController: FormViewController {
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
         return instance
     }()
-    
+
     lazy var scaleBMinus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("B-")
@@ -258,12 +258,12 @@ class GradeScaleViewController: FormViewController {
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
         return instance
     }()
-    
+
     lazy var scaleCMinus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("C-")
@@ -275,12 +275,12 @@ class GradeScaleViewController: FormViewController {
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
         return instance
     }()
-    
+
     lazy var scaleDMinus: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("D-")
@@ -292,12 +292,12 @@ class GradeScaleViewController: FormViewController {
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder) && self.userDefaults.float(forKey: instance.title) != 0.0) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
         return instance
     }()
-    
+
     lazy var scaleF: TextFieldFormItem = {
         let instance = TextFieldFormItem()
         instance.title("F")
@@ -309,7 +309,7 @@ class GradeScaleViewController: FormViewController {
         instance.validate(CountSpecification.max(4), message: "Length must be maximum 3 digits")
         if (self.userDefaults.float(forKey: instance.title) != Float(instance.placeholder)) {
             instance.value = String(format: "%.2f", self.userDefaults.float(forKey: instance.title))
-        }else{
+        } else {
             instance.value = instance.placeholder
         }
         return instance

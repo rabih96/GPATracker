@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 public class UndoView: UIView {
-    
+
     var containerView = UIView()
     var undoButton = UIButton()
     var fuckingTimer = Timer()
-    
+
     private let APP_WINDOW: UIWindow = UIApplication.shared.delegate!.window!!
 
     open class var shared: UndoView {
@@ -23,21 +23,21 @@ public class UndoView: UIView {
         }
         return Static.instance
     }
-    
+
     open func showUndoViewForCourse(courseName: String) {
-        
+
         fuckingTimer.invalidate()
-        
-        let viewWidth = (APP_WINDOW.frame.size.width - 150)/2
-        let height  = APP_WINDOW.frame.size.height
-        
+
+        let viewWidth = (APP_WINDOW.frame.size.width - 150) / 2
+        let height = APP_WINDOW.frame.size.height
+
         containerView.frame = CGRect(x: viewWidth, y: height, width: 150, height: 40)
-        containerView.backgroundColor = UIColor(red:0.89, green:0.30, blue:0.30, alpha:1)
+        containerView.backgroundColor = UIColor(red: 0.34, green: 0.71, blue: 0.92, alpha: 1.0)
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = 20
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.red.cgColor
-        
+        containerView.layer.borderWidth = 0
+        containerView.layer.borderColor = UIColor(red: 0.09, green: 0.08, blue: 0.08, alpha: 0.8).cgColor
+
         undoButton = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
         undoButton.setTitle("Undo Delete", for: .normal)
         undoButton.setTitleColor(.white, for: .normal)
@@ -47,35 +47,35 @@ public class UndoView: UIView {
         undoButton.layer.borderColor = UIColor.white.cgColor
         undoButton.addTarget(self, action: #selector(undoDelete), for: .touchUpInside)
         containerView.addSubview(undoButton)
-        
+
         APP_WINDOW.addSubview(containerView)
         APP_WINDOW.windowLevel = UIWindowLevelStatusBar - 1
-        
+
         UIView.animate(withDuration: 0.3) {
-            self.containerView.frame = CGRect(x: viewWidth, y: height - 80, width: 150, height: 40)
+            self.containerView.frame = CGRect(x: viewWidth, y: height - 100, width: 150, height: 40)
         }
-        
+
         fuckingTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(hideView), userInfo: nil, repeats: false)
     }
-    
+
     func undoDelete() {
         courses.append(justDeletedCourse)
         saveCoursesToJSON()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         hideView()
     }
-    
+
     func hideView() {
 
-        let viewWidth = (APP_WINDOW.frame.size.width - 150)/2
-        let height  = APP_WINDOW.frame.size.height
-        
+        let viewWidth = (APP_WINDOW.frame.size.width - 150) / 2
+        let height = APP_WINDOW.frame.size.height
+
         UIView.animate(withDuration: 0.2, animations: {
             self.containerView.frame = CGRect(x: viewWidth, y: height, width: 150, height: 40)
         }) { (done) in
             self.containerView.removeFromSuperview()
             justDeletedCourse = nil
         }
-        
+
     }
 }

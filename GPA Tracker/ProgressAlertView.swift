@@ -67,7 +67,7 @@ open class ProgressAlertView {
         thinFilledProgress.updateProgress(CGFloat(percent), initialDelay: 0.25, duration: 1.5)
 
         percentageLabel.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-        percentageLabel.text = String(format: "%.0f%%", percent*100)
+        percentageLabel.text = String(format: "%.0f%%", percent * 100)
         percentageLabel.textAlignment = .center
         percentageLabel.font = UIFont(name: "AppleSDGothicNeo-Light", size: 40)
         percentageLabel.textColor = UIColor.init(red: 74 / 255, green: 144 / 255, blue: 226 / 255, alpha: 1)

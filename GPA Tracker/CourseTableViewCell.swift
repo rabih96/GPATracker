@@ -23,7 +23,7 @@ class CourseTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         gradeTitleLabel.baselineAdjustment = .alignCenters
-        gradeTitleLabel.backgroundColor = ThemeManager.currentTheme().color//UIColor.init(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+        gradeTitleLabel.backgroundColor = /*ThemeManager.currentTheme().color*/UIColor.init(red: 25/255, green: 126/255, blue: 192/255, alpha: 0.8)
         gradeTitleLabel.layer.cornerRadius = 7.5
         gradeTitleLabel.textColor = UIColor.white
         gradeTitleLabel.layer.masksToBounds = true

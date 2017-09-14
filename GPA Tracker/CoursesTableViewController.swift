@@ -16,8 +16,8 @@
 
 import UIKit
 import SwiftyJSON
-import GoogleMobileAds
-import AudioToolbox
+//import GoogleMobileAds
+//import AudioToolbox
 import SwiftRater
 
 var valueToPass         : Course!
@@ -26,9 +26,9 @@ var coursesInSections           = 0
 var filteredSearch              = [Course]()
 var semestersListArray:[String] = []
 var repeated                    = 6
-var bannerView                  = GADBannerView()
+//var bannerView                  = GADBannerView()
 
-class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
+class CoursesTableViewController: UITableViewController/*, GADBannerViewDelegate*/ {
 
     @IBOutlet var semestersTable: UITableView!
     @IBOutlet weak var cgpaLabel: UILabel!
@@ -58,7 +58,7 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
     
     func animateOut() -> Void {
         UIView.animate(withDuration: 2.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            self.thePlusButton.tintColor = UIColor.black
+            self.thePlusButton.tintColor = UIColor.white
         }, completion: { (finished: Bool) in
             if repeated > 0 {
                 repeated -= 1
@@ -67,25 +67,32 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
         })
     }
     
+    /*override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let window = UIApplication.shared.delegate!.window!!
+        let viewWidth = window.frame.size.width
+        let ySpacing  = window.frame.size.height - 50 - (self.navigationController?.toolbar.frame.height)!
+        
+        bannerView.frame = CGRect(x: 0, y: ySpacing, width: viewWidth, height: 50)
+        bannerView.center.x = window.center.x
+    }*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.definesPresentationContext = true
 
-        let window = UIApplication.shared.delegate!.window!!
+        /*let window = UIApplication.shared.delegate!.window!!
         let viewWidth = window.frame.size.width
-        let ySpacing  = window.frame.size.height - 50
+        let ySpacing  = window.frame.size.height - 50 - (self.navigationController?.toolbar.frame.height)!
         
-        //self.navigationController?.setToolbarHidden(false, animated: true)
-        bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: viewWidth, height: 50))
+        bannerView = GADBannerView(adSize: GADAdSizeFromCGSize(CGSize(width: viewWidth, height: 50)))
         bannerView.frame = CGRect(x: 0, y: ySpacing, width: viewWidth, height: 50)
-        bannerView.adUnitID = "ca-app-pub-2024178867950672/8116949983"
+        bannerView.center.x = window.center.x
+        window.addSubview(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        
-        //  ADS BANNER VIEW
-        //self.navigationController?.view.addSubview(bannerView)
-        
+        bannerView.load(GADRequest())*/
         
         if self.tableView.contentOffset.y == 0 {
             self.tableView.contentOffset = CGPoint(x: 0.0, y: searchController.searchBar.frame.size.height)
@@ -98,12 +105,6 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
         semestersTable.tableHeaderView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.tintColor = .black
-
-        if let splitViewController = splitViewController {
-            let controllers = splitViewController.viewControllers
-            detailViewController = controllers[controllers.count-1] as? CourseDetailsController
-        }
-        
         searchController.searchBar.searchBarStyle = .minimal
         
         reloadTitle()
@@ -118,6 +119,8 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
         if semestersListArray.count == 0 {
             animateIn()
         }
+        
+        //semestersTable.frame = CGRect(x: semestersTable.frame.origin.x, y: semestersTable.frame.origin.y, width: semestersTable.frame.size.width, height: semestersTable.frame.size.height - 50)
         
     }
     
@@ -257,39 +260,39 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
             return nil
         }
         
-        var semestersYearArray:[String] = []
-        
+        var semestersYearArray: [String] = []
+
         for course in courses {
             if !course.semester.isEmpty {
-                if !semestersYearArray.contains(course.semester+" "+String(course.year)) {
-                    semestersYearArray.append(course.semester+" "+String(course.year))
+                if !semestersYearArray.contains(course.semester + " " + String(course.year)) {
+                    semestersYearArray.append(course.semester + " " + String(course.year))
                 }
             }
         }
-        
-        var sms:[String] = []
-        var zmz:[Course] = []
-        
+
+        var sms: [String] = []
+        var zmz: [Course] = []
+
         for course in courses {
-            if (course.semester+" "+String(course.year)) ==  semestersYearArray[section]{
+            if (course.semester + " " + String(course.year)) == semestersYearArray[section] {
                 if !sms.contains(course.name) {
                     sms.append(course.name)
                     zmz.append(course)
                 }
             }
         }
-        
-        var semesterGPA:Float = 0.0
+
+        var semesterGPA: Float = 0.0
         var semesterCredits = 0
-        
-        for c in zmz{
+
+        for c in zmz {
             semesterCredits += c.credits
         }
-        
-        for c in zmz{
-            semesterGPA += (Float(c.credits)/Float(semesterCredits)) * gradeToValue(c.grade)
+
+        for c in zmz {
+            semesterGPA += (Float(c.credits) / Float(semesterCredits)) * gradeToValue(c.grade)
         }
-        
+
         let headerView = UIView()
 
         let semesterLabel = UILabel()
@@ -298,7 +301,7 @@ class CoursesTableViewController: UITableViewController, GADBannerViewDelegate {
         semesterLabel.textAlignment = .left
         semesterLabel.font = UIFont(name: "Avenir", size: 15)
         headerView.addSubview(semesterLabel)
-        
+
         let gpaLabel = UILabel()
         gpaLabel.frame = CGRect(x: (tableView.tableHeaderView?.frame.size.width)! - 200, y: 2.5, width: 185, height: 30)
         gpaLabel.text = "GPA: " + String(format: "%.2f", semesterGPA) + " - " + String(semesterCredits) + " credits"
