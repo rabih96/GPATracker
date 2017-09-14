@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - SwiftRater (0.2.3)
+  - SwiftyDropbox (4.1.2):
+    - Alamofire (~> 4.4.0)
+  - SwiftyFORM (1.5.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Charts
+  - SwiftRater
+  - SwiftyDropbox (~> 4.1.1)
+  - SwiftyFORM
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  SwiftRater: 3c0f8136a011a616faa2a04c982d8d9d80b7741e
+  SwiftyDropbox: eb79d166c2850e50eed01c280c7c64b4b69c50a5
+  SwiftyFORM: dc40697dd6f776bc8fdf095ba637f99c55009a01
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: d669a599f8e2611a641f103b6d1f6f23ce8cbd0d
+
+COCOAPODS: 1.3.1
